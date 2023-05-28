@@ -1,0 +1,188 @@
+**List of elements** 
+     RDF
+        *Description
+        *Property
+        *ID
+        *Bag
+        *Alt
+        *Seq
+        *type
+        *resource
+        *dataType
+        *value
+        *parseType
+     RDFS
+        *Class
+        *SubClassOf
+        *comment
+        *subPropertyOf
+        *range
+        *domain
+        *label
+     VRA:
+        *manufacturer 
+    DCT:
+        *contributor 
+        *title 
+    VGMS
+        *retailReleaseDate
+        *format
+        *methodConnectivity
+        *regionCode
+    Wikidata:
+        *computer hardware
+        *operatingSystem
+        *cpu
+        *clockFrequency
+        *gpu
+    VGCS:
+         Console
+         Hardware
+         Accessories
+         consoleDateRange
+         controllerType
+         controllerNumber
+         videoPortType
+         numberOfVideoPorts
+         displayResolution
+         colorRange
+         regionLock
+         consoleRevisionNumber
+         memoryType
+         memoryValue
+         internetCapability 
+         numberOfCPUs
+         randomAccessMemory
+         videoRandomAccessMemory
+         soundChip
+         audioPort
+         numberOfAudioPorts
+         hardwareExpansions 
+         
+**Class Definintions** 
+    
+    <rdfs:Class rdf:ID="Console">
+        <rdfs:label>Console</rdfs:label>
+        <rdfs:comment>This defines the physical video game unit being described. All other game components and information works through the use of the main console. </rdfs:comment>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Hardware">
+        <rdfs:label>Hardware</rdfs:label>
+        <rdfs:comment>This defines all technical aspects of the video game console. </rdfs:comment>
+        <rdfs:subClassOf   rdf:resource="https://www.wikidata.org/wiki/Q3966"/> <!-- computer hardware -->
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:ID="Accessories">
+        <rdfs:label>Accessories</rdfs:label>
+        <rdfs:comment>This includes all console hardware that is not required to run the games on a technical level. This includes controllers and memory cards because while most are required to actually play titles, they are not required to run the software itself. </rdfs:comment>
+    </rdfs:Class>
+	
+**Property Definintions** 
+    
+    <rdf:Property rdf:ID="consoleDateRange">
+        <rdfs:label xml:lang="en">Console date range</rdfs:label>
+        <rdfs:comment>Used in this schema to represent the time frame the game console was available on the commercial marketplace. </rdfs:comment>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q50101 "/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="controllerType">
+        <rdfs:label xml:lang="en">Controller type</rdfs:label>
+        <rdfs:comment>This refers to the unique game controller type that functions with the console. Most unique game controls will not work with other game consoles. Use a URI whenever possible. </rdfs:comment>
+       <rdfs:domain rdf:resource="#Accessories"/>
+
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="controllerStyle">
+        <rdfs:label xml:lang="en">Controller Style</rdfs:label>
+        <rdfs:comment>This denotes the way in which controllers are connected to the game console. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="controllerNumber">
+        <rdfs:label xml:lang="en">Controller number</rdfs:label>
+        <rdfs:comment>This refers to the number of controllers that the game console can accept without accessories. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="videoPortType">
+        <rdfs:label xml:lang="en">Video Port Type</rdfs:label>
+        <rdfs:comment>This refers to the type of video connector present on the game console. The video port connects from the console to the tv to display video.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/wiki/Property:P1641"/> <!-- Port -->
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="numberOfVideoPorts">
+        <rdfs:label xml:lang="en">Number of video ports</rdfs:label>
+        <rdfs:comment>This describes how many video ports a game console has on it. Many consoles have multiple video ports of different types or multiple of the same port. Audio and video ports are often combined. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="displayResolution">
+        <rdfs:label xml:lang="en">Display resolution</rdfs:label>
+        <rdfs:comment>Used in this schema to refer to the video resolution the game console is capable of displaying to a monitor or television. </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="https://www.w3.org/2003/12/exif/ns#resolution "/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="colorRange">
+        <rdfs:label xml:lang="en">Color range</rdfs:label>
+        <rdfs:comment>This property defines the possible colors the game console is capable of displaying. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="regionLock">
+        <rdfs:label xml:lang="en">Region Lock</rdfs:label>
+        <rdfs:comment>This is a form of restricting access to titles from certain regions using game console hardware and software. This can be as simple as cartridges from other regions not fitting into the console or is intentionally coded to not accept some games.Use a URI whenever possible. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="consoleRevisionNumber">
+        <rdfs:label xml:lang="en">consoleRevisionNumber</rdfs:label>
+        <rdfs:comment>This refers to a unique number that identifies specific hardware variations of the game console. This number helps to distinguish between the different revisions of some game consoles. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="memoryType">
+        <rdfs:label xml:lang="en">Memory type</rdfs:label>
+        <rdfs:comment>This clarifies what type of internal or external storage memory the console uses. Some early consoles don’t have any memory while newer consoles use computer grade hard drives that can be freely swapped. Memory allows a player to save their progress in a game. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="memoryValue">
+        <rdfs:label xml:lang="en">Memory value</rdfs:label>
+        <rdfs:comment>This property defines the amount of storage space available from the console’s memory type. This property should not be used if the console does not have a memory type. </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#memoryType"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="internetCapability">
+        <rdfs:label xml:lang="en">Internet capability</rdfs:label>
+        <rdfs:comment>This property determines if the console has internet capabilities and what type of connection the console can accept. Some consoles have internet ports or wireless built in, some have internet ports as accessories and many predate internet entirely. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="numberOfCPUs">
+        <rdfs:label xml:lang="en">Number of CPUs</rdfs:label>
+        <rdfs:comment>This property refers to the number of CPUs present in a game console. While most consoles only have one CPU several game consoles have utilized several processors to achieve more complicated processing power. </rdfs:comment> 
+    </rdf:Property>
+  
+    <rdf:Property rdf:ID="randomAccessMemory">
+        <rdfs:label xml:lang="en">Random Access Memory</rdfs:label>
+        <rdfs:comment>This refers to the primary memory that computers can access when performing calculations which is different than storage memory. For this schema it refers to the amount of RAM that a game console has. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="videoRandomAccessMemory">
+        <rdfs:label xml:lang="en">Video random access memory</rdfs:label>
+        <rdfs:comment>This refers to the primary memory that a computer uses to help generate graphics. This is similar to RAM but focused entirely on generating computer graphics.</rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="soundChip">
+        <rdfs:label xml:lang="en">Sound chip</rdfs:label>
+        <rdfs:comment>This is a custom computer chip focused on creating sound. Most older game consoles use unique or off the shelf sound chips to provide music. Many older consoles have sound chips that have a harsh, digital sound. Newer consoles often have its sound chip built into the CPU. </rdfs:comment>
+        <rdfs:range rdf:resource="#SoundChip"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="audioPort">
+        <rdfs:label xml:lang="en">Audio port</rdfs:label>
+        <rdfs:comment>This refers to an audio connector present on the game console. An audio port moves sound from the game console to the TV or a headset. Oftentimes the audio and video ports are combined.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/wiki/Property:P1641"/> <!-- Port -->
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="numberOfAudioPorts">
+        <rdfs:label xml:lang="en">Number of audio ports</rdfs:label>
+        <rdfs:comment>This property defines the number of audio ports on the game console. Some game consoles have multiple audio ports while 1 to 2 is common. </rdfs:comment>
+    </rdf:Property>
+    
+    <rdf:Property rdf:ID="hardwareExpansions">
+        <rdfs:label xml:lang="en">Hardware Expansions</rdfs:label>
+        <rdfs:comment>This refers to computer accessories designed for certain game consoles that extend the capabilities of what the console can do such as adding support for playing optical discs. In some cases this created entirely new ‘add on’ systems that are dependent on both the expansion and the original console to function. </rdfs:comment>
+    </rdf:Property>
