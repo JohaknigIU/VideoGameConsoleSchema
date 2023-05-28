@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="https://example.org/VideoGameConsoleSchema/2023/03/21-rdf-schema#"
+    xmlns:vgcs="https://example.org/VideoGameConsoleSchema/2023/03/21-rdf-schema#"
+    xmlns:vgms="http://metadataregistry.org/schema/show/id/132.html#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:wd="https://www.wikidata.org/wiki/Property:"
+    xmlns:vra="http://purl.org/vra/">
+      
+    <rdf:Description rdf:ID="Pong">
+        <rdf:type rdf:resource="#Console"/>
+            <dct:title>Home Pong</dct:title>
+            <vra:manufacturer rdf:resource="https://www.wikidata.org/wiki/Q13409231"/> <!-- Atari, Inc. -->
+            <dct:contributor> 
+                <rdf:Bag>
+                    <rdf:_1>Harold Lee</rdf:_1>
+                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q537592"/> <!-- Allan Alcorn -->
+                </rdf:Bag>
+            </dct:contributor>
+            <vgms:retailReleaseDate>1976</vgms:retailReleaseDate>
+            <vgms:format>Built in</vgms:format>
+            <vgms:methodConnectivity>Built in Controlls</vgms:methodConnectivity>
+            <vgcs:controllerNumber>2</vgcs:controllerNumber>
+            <vgcs:displayResolution>160x200</vgcs:displayResolution>
+            <vgcs:colorRange>Monochrome</vgcs:colorRange>
+            <vgms:regionCode rdf:resource="https://www.wikidata.org/wiki/Q185796"/> <!-- NTSC -->
+            <vgcs:regionLock>None</vgcs:regionLock>
+            <vgcs:consoleRevisionNumber>C-100</vgcs:consoleRevisionNumber>
+            <wd:P306>none</wd:P306> <!-- operating system -->
+            
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Hardware"/>
+                        <vgcs:videoPortType rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                        <vgcs:numberOfVideoPorts>1</vgcs:numberOfVideoPorts>
+                        <wd:P880>75081 HML</wd:P880> <!-- cpu -->
+                        <vgcs:numberOfCPUs>1</vgcs:numberOfCPUs>
+                        <vgcs:randomAccessMemory>unknown</vgcs:randomAccessMemory> 
+                        <vgcs:soundChip>75081 HML</vgcs:soundChip>
+                        <vgcs:audioPort rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                </dct:hasPart> 
+        
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Accessories"/>
+                        <vgcs:controllerType>Built in dials</vgcs:controllerType>
+                        <vgcs:memoryType>none</vgcs:memoryType>
+                        <vgcs:hardwareExpansions>none</vgcs:hardwareExpansions> 
+                </dct:hasPart>
+    </rdf:Description>
+    
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    
+    <rdf:Description rdf:ID="AtariVCS">
+        <rdf:type rdf:resource="#Console"/>
+            <dct:title>
+                <rdf:Bag>
+                    <rdf:_1>Atari Video Computer System</rdf:_1>
+                    <rdf:_2>Atari 2600</rdf:_2>
+                </rdf:Bag>
+            </dct:title>
+            <vra:manufacturer rdf:resource="https://www.wikidata.org/wiki/Q13409231"/> <!-- Atari, Inc. -->
+            <dct:contributor rdf:resource="https://www.wikidata.org/wiki/Q29452891"/> <!-- Joseph C. Decuir -->
+            <vgcs:consoleDateRange>1977/1992</vgcs:consoleDateRange>
+            <vgms:retailReleaseDate>1977-09</vgms:retailReleaseDate>
+            <vgms:format rdf:resource="https://www.wikidata.org/wiki/Q633454"/> <!-- ROM Cartridge -->
+            <vgms:methodConnectivity>Wired Controllers</vgms:methodConnectivity>
+            <vgcs:controllerNumber>2</vgcs:controllerNumber>
+            <vgcs:displayResolution>160x192</vgcs:displayResolution>
+            <vgcs:colorRange>128</vgcs:colorRange>
+            <vgms:regionCode>
+                <rdf:Bag>               
+                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185796"/> <!-- NTSC -->
+                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q105973"/> <!-- PAL -->
+                    <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q223765"/>  <!-- SECAM -->
+                </rdf:Bag>
+            </vgms:regionCode>
+            <vgcs:regionLock>None</vgcs:regionLock>
+            <vgcs:consoleRevisionNumber>
+                <rdf:Seq>
+                    <rdf:_1>CX2600</rdf:_1>
+                    <rdf:_2>CX2600-A</rdf:_2>
+                    <rdf:_3>Atari 2600</rdf:_3>
+                    <rdf:_4>Atari 2600 Jr.</rdf:_4>
+                </rdf:Seq>
+           </vgcs:consoleRevisionNumber>
+            <wd:P306>none</wd:P306> <!-- operating system -->
+        
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Hardware"/>
+                        <vgcs:videoPortType rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                        <vgcs:numberOfVideoPorts>1</vgcs:numberOfVideoPorts>
+                        <wd:P880 rdf:resource="https://www.wikidata.org/wiki/Q1196571"/> <!-- cpu, MOS 6507 -->
+                        <wd:P2149 rdf:datatype="https://www.wikidata.org/wiki/Q732707">1.19</wd:P2149> <!-- clock frequency, megahertz -->
+                        <vgcs:numberOfCPUs>1</vgcs:numberOfCPUs>
+                        <vgcs:randomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q8799">128</vgcs:randomAccessMemory> <!-- byte -->
+                        <wd:P2560 rdf:resource="https://www.wikidata.org/wiki/Q749469"/> <!-- gpu, Television Interface Adaptor -->  
+                        <vgcs:soundChip rdf:resource="https://www.wikidata.org/wiki/Q749469"/> <!-- Television Interface Adaptor -->
+                        <vgcs:audioPort rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                        <vgcs:numberOfAudioPorts>1</vgcs:numberOfAudioPorts>
+                </dct:hasPart> 
+        
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Accessories"/>
+                        <vgcs:controllerType rdf:resource="https://www.wikidata.org/wiki/Q28403732"/> <!-- Atari CX40 joystick -->
+                        <vgcs:memoryType>none</vgcs:memoryType>
+                        <vgcs:internetCapability rdf:resource="https://www.wikidata.org/wiki/Q5519779"/> <!-- GameLine -->
+                        <vgcs:hardwareExpansions rdf:resource="https://www.wikidata.org/wiki/Q2333089"/> <!-- Starpath Supercharger -->   
+                </dct:hasPart>
+    </rdf:Description>
+    
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    
+    <rdf:Description rdf:ID="NES">
+        <rdf:type rdf:resource="#Console"/>
+            <dct:title>
+                <rdf:Bag>
+                    <rdf:_1>Nintendo Entertainment System</rdf:_1>
+                    <rdf:_2>Famicom</rdf:_2>
+                </rdf:Bag>
+            </dct:title>
+            <vra:manufacturer rdf:resource="https://www.wikidata.org/wiki/Q8093"/> <!-- Nintendo -->
+            <dct:contributor rdf:resource="https://www.wikidata.org/wiki/Q587416"/>
+            <vgcs:consoleDateRange>1983/2003</vgcs:consoleDateRange>
+            <vgms:retailReleaseDate>1983-07-15</vgms:retailReleaseDate>
+            <vgms:format rdf:resource="https://www.wikidata.org/wiki/Q633454"/> <!-- ROM Cartridge -->
+            <vgms:methodConnectivity>Wired Controllers</vgms:methodConnectivity>
+            <vgcs:controllerNumber>2</vgcs:controllerNumber>
+            <vgcs:displayResolution>256x240</vgcs:displayResolution>
+            <vgcs:colorRange>256</vgcs:colorRange>
+            <vgms:regionCode>
+                <rdf:Bag>               
+                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185796"/> <!-- NTSC -->
+                    <rdf:_2>PAL-A</rdf:_2>
+                    <rdf:_3>Asia</rdf:_3>
+                </rdf:Bag>
+            </vgms:regionCode>
+            <vgcs:regionLock>
+                <rdf:Bag>               
+                    <rdf:_1>Cartridge Shape</rdf:_1>
+                    <rdf:_2>System Hardware</rdf:_2>
+                </rdf:Bag>
+            </vgcs:regionLock>
+            <vgcs:consoleRevisionNumber>
+                <rdf:Seq>
+                    <rdf:_1>HVC-001</rdf:_1>
+                    <rdf:_2>HVC-101</rdf:_2>
+                    <rdf:_3>AN-500</rdf:_3>
+                    <rdf:_4>AN-505R</rdf:_4>
+                    <rdf:_5>AN-505-BK</rdf:_5>
+                    <rdf:_6>AN-505-RD</rdf:_6>
+                    <rdf:_7>NES-001</rdf:_7>
+                    <rdf:_8>NES-101</rdf:_8>
+                </rdf:Seq>
+            </vgcs:consoleRevisionNumber>
+            <wd:P306>none</wd:P306> <!-- operating system -->
+            
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Hardware"/>
+                        <vgcs:videoPortType> 
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                            </rdf:Bag>
+                        </vgcs:videoPortType>
+                        <vgcs:numberOfVideoPorts>2</vgcs:numberOfVideoPorts>
+                        <wd:P880 rdf:resource="https://www.wikidata.org/wiki/Q1125051"/> <!-- cpu, Ricoh 2A03 -->
+                        <wd:P2149> <!-- clock frequency -->
+                            <rdf:Bag>
+                                <rdf:value rdf:datatype="https://www.wikidata.org/wiki/Q732707">1.66</rdf:value> <!-- megahertz, value different in PAL territories -->
+                                <rdf:value rdf:datatype="https://www.wikidata.org/wiki/Q732707">1.79</rdf:value> <!-- megahertz -->
+                            </rdf:Bag>
+                        </wd:P2149> 
+                        <vgcs:numberOfCPUs>1</vgcs:numberOfCPUs>
+                        <vgcs:randomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79726">2</vgcs:randomAccessMemory> <!-- kilobyte -->
+                        <wd:P2560 rdf:resource="https://www.wikidata.org/wiki/Q7191175"/> <!-- gpu, Picture Processing Unit -->
+                        <vgcs:videoRandomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79726">2</vgcs:videoRandomAccessMemory> <!-- kilobyte -->    
+                        <vgcs:soundChip rdf:resource="https://www.wikidata.org/wiki/Q1125051"/> <!-- Ricoh 2A03 -->
+                        <vgcs:audioPort>
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                            </rdf:Bag>
+                        </vgcs:audioPort>
+                        <vgcs:numberOfAudioPorts>2</vgcs:numberOfAudioPorts>
+                </dct:hasPart>
+        
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Accessories"/>
+                        <vgcs:controllerType>
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q67172202"/> <!-- NES Controller -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q3334344"/> <!-- NES Advantage -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q2339470"/> <!-- NES Zapper -->
+                                <rdf:_4 rdf:resource="https://www.wikidata.org/wiki/Q1326011"/> <!-- Power Glove -->
+                            </rdf:Bag>
+                        </vgcs:controllerType>
+                        <vgcs:memoryType>none</vgcs:memoryType>
+                        <vgcs:internetCapability rdf:resource="https://www.wikidata.org/wiki/Q3064866"/> <!-- Famicom Modem -->
+                        <vgcs:hardwareExpansions>
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q135321"/> <!-- Family Computer Disk System -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q1156500"/> <!-- R.O.B. -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q3064859"/> <!-- Famicom Keyboard -->
+                            </rdf:Bag>
+                        </vgcs:hardwareExpansions> 
+                </dct:hasPart>
+    </rdf:Description>
+    
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    
+    <rdf:Description rdf:ID="TurboGrafx16">
+        <rdf:type rdf:resource="#Console"/>
+            <dct:title>
+                <rdf:Bag>
+                    <rdf:_1>TurboGraphix-16</rdf:_1>
+                    <rdf:_2>PC Engine</rdf:_2>
+                </rdf:Bag>
+            </dct:title>
+            <vra:manufacturer>
+                <rdf:Bag>
+                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q1049502"/> <!-- Hudson Soft -->
+                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q219203"/> <!-- NEC --> 
+                </rdf:Bag>
+            </vra:manufacturer>
+            <vgcs:consoleDateRange>1987/1994</vgcs:consoleDateRange>
+            <vgms:retailReleaseDate>1987-10-30</vgms:retailReleaseDate>
+            <vgms:format rdf:resource="https://www.wikidata.org/wiki/Q633454"/> <!-- ROM Cartridge -->
+            <vgms:methodConnectivity>Wired Controllers</vgms:methodConnectivity>
+            <vgcs:controllerNumber>1</vgcs:controllerNumber>
+            <vgcs:displayResolution>
+                <rdf:Bag>
+                    <rdf:_1>556x242</rdf:_1>
+                    <rdf:_2>256x239</rdf:_2>
+                </rdf:Bag>
+            </vgcs:displayResolution>
+            <vgcs:colorRange>482</vgcs:colorRange>
+            <vgms:regionCode>
+                <rdf:Bag>               
+                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185796"/> <!-- NTSC -->
+                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q105973"/> <!-- PAL -->
+                    <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q6955505"/>  <!-- NTSC-J -->
+                </rdf:Bag>
+            </vgms:regionCode>
+            <vgcs:regionLock>Cartridge design</vgcs:regionLock>
+            <wd:P306>none</wd:P306> <!-- operating system -->
+            
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Hardware"/>
+                        <vgcs:videoPortType> 
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                            </rdf:Bag>
+                        </vgcs:videoPortType>
+                        <vgcs:numberOfVideoPorts>2</vgcs:numberOfVideoPorts>
+                        <wd:P880 rdf:resource="https://www.wikidata.org/wiki/Q1323830"/> <!-- cpu, Hudson Soft HuC6280 -->
+                        <wd:P2149 rdf:datatype="https://www.wikidata.org/wiki/Q732707">7.6</wd:P2149> <!-- clock frequency, megahertz -->
+                        <vgcs:numberOfCPUs>1</vgcs:numberOfCPUs>
+                        <vgcs:randomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79726">8</vgcs:randomAccessMemory> <!-- kilobyte -->
+                        <vgcs:videoRandomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79726">64</vgcs:videoRandomAccessMemory> <!-- kilobyte -->   
+                        <vgcs:soundChip rdf:resource="https://www.wikidata.org/wiki/Q1323830"/> <!-- Hudson Soft HuC6280 -->
+                        <vgcs:audioPort>
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                            </rdf:Bag>
+                        </vgcs:audioPort>
+                        <vgcs:numberOfAudioPorts>2</vgcs:numberOfAudioPorts>
+                </dct:hasPart>
+        
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Accessories"/>
+                        <vgcs:controllerType>
+                            <rdf:Bag>
+                                <rdf:_1>TurboGrafx-16 TurboPad</rdf:_1>
+                                <rdf:_2>PC Engine Pad</rdf:_2>
+                                <rdf:_3>TurboGrafx-16 TurboPad II</rdf:_3>
+                                <rdf:_4 rdf:resource="https://www.wikidata.org/wiki/Q96622557"/> <!-- TurboGrafx-16 TurboStick -->
+                            </rdf:Bag>
+                        </vgcs:controllerType>
+                        <vgcs:memoryType>Internal memory</vgcs:memoryType>
+                        <vgcs:memoryValue rdf:datatype="https://www.wikidata.org/wiki/Q79726">2</vgcs:memoryValue> <!-- kilobyte -->
+                        <vgcs:hardwareExpansions>
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q10854461"/> <!-- TurboGrafx-CD -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q13574779"/> <!-- Super CD-ROM2 -->
+                                <rdf:_3>Turbo Tap</rdf:_3>
+                                <rdf:_4>Memory Base 128</rdf:_4>
+                                <rdf:_5 rdf:resource="https://www.wikidata.org/wiki/Q11285553"/> <!-- Arcade Card -->
+                            </rdf:Bag>
+                        </vgcs:hardwareExpansions> 
+                </dct:hasPart>
+    </rdf:Description>
+   
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    
+    <rdf:Description rdf:ID="SegaGenesis">
+        <rdf:type rdf:resource="#Console"/>
+            <dct:title>
+                <rdf:Bag>
+                    <rdf:_1>Sega Genesis</rdf:_1>
+                    <rdf:_2>Sega Mega Drive</rdf:_2>
+                </rdf:Bag>
+            </dct:title>
+            <vra:manufacturer rdf:resource="https://www.wikidata.org/wiki/Q122741"/> <!-- Sega -->
+            <dct:contributor> 
+                <rdf:Bag>
+                    <rdf:_1>Hideki Sato</rdf:_1>
+                    <rdf:_2>Masami Ishikawa</rdf:_2>
+                </rdf:Bag>
+            </dct:contributor>
+            <vgcs:consoleDateRange>1988/1997</vgcs:consoleDateRange>
+            <vgms:retailReleaseDate>1988-10-29</vgms:retailReleaseDate>
+            <vgms:format rdf:resource="https://www.wikidata.org/wiki/Q633454"/> <!-- ROM Cartridge -->
+            <vgms:methodConnectivity>Wired Controllers</vgms:methodConnectivity>
+            <vgcs:controllerNumber>2</vgcs:controllerNumber>
+            <vgcs:displayResolution>
+                <rdf:Bag>
+                    <rdf:_1>320×224</rdf:_1>
+                    <rdf:_2>256×224</rdf:_2>
+                    <rdf:_3>320×240</rdf:_3>
+                    <rdf:_4>256×240</rdf:_4>
+                    <rdf:_5>320×488</rdf:_5>
+                    <rdf:_6>256×448</rdf:_6>
+                    <rdf:_7>320×480</rdf:_7>
+                    <rdf:_8>256×480</rdf:_8>
+                </rdf:Bag>
+            </vgcs:displayResolution>
+            <vgcs:colorRange>512</vgcs:colorRange>
+            <vgms:regionCode>
+                <rdf:Bag>               
+                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185796"/> <!-- NTSC -->
+                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q105973"/> <!-- PAL -->
+                    <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q6955505"/>  <!-- NTSC-J -->
+                </rdf:Bag>
+            </vgms:regionCode>
+            <vgcs:regionLock>
+                <rdf:Bag>               
+                    <rdf:_1>Cartridge Shape</rdf:_1>
+                    <rdf:_2>System Software</rdf:_2>
+                </rdf:Bag>
+            </vgcs:regionLock>
+            <vgcs:consoleRevisionNumber>
+                <rdf:Seq>
+                    <rdf:_1>VA0 Model 1</rdf:_1>
+                    <rdf:_2>VA1 Model 1</rdf:_2>
+                    <rdf:_3>VA2 Model 1</rdf:_3>
+                    <rdf:_4>VA3 Model 1</rdf:_4>
+                    <rdf:_5>VA4 Model 1</rdf:_5>
+                    <rdf:_6>VA5 Model 1</rdf:_6>
+                    <rdf:_7>VA6 Model 1</rdf:_7>
+                    <rdf:_8>VA6.5 Model 1</rdf:_8>
+                    <rdf:_9>VA6.8 Model 1</rdf:_9>
+                    <rdf:_10>VA7 Model 1</rdf:_10>
+                    <rdf:_11>VA0 Model 2</rdf:_11>
+                    <rdf:_12>VA1 Model 2</rdf:_12>
+                    <rdf:_13>VA1.8 Model 2</rdf:_13>
+                    <rdf:_14>VA2 Model 2</rdf:_14>
+                    <rdf:_15>VA2.3 Model 2</rdf:_15>
+                    <rdf:_16>VA3 Model 2</rdf:_16>
+                    <rdf:_17>VA4 Model 2</rdf:_17>
+                    <rdf:_18>VA1 Model 3</rdf:_18>
+                    <rdf:_19>VA2 Model 3</rdf:_19>
+                </rdf:Seq>
+            </vgcs:consoleRevisionNumber>
+            <wd:P306>none</wd:P306>
+            
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Hardware"/>
+                        <vgcs:videoPortType> 
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q1133767"/> <!-- DIN connector -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q1359217"/> <!-- Mini-DIN Connector -->
+                            </rdf:Bag>
+                        </vgcs:videoPortType>
+                        <vgcs:numberOfVideoPorts>3</vgcs:numberOfVideoPorts>
+                        <wd:P880 rdf:resource="https://www.wikidata.org/wiki/Q667808"/> <!-- cpu, Motorola 68000 -->
+                        <wd:P2149 rdf:datatype="https://www.wikidata.org/wiki/Q732707">7.6</wd:P2149> <!-- clock frequency, megahertz  -->
+                        <vgcs:numberOfCPUs>1</vgcs:numberOfCPUs>
+                        <vgcs:randomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79726">64</vgcs:randomAccessMemory> <!-- kilobyte -->
+                        <wd:P2560>Yamaha YM7101</wd:P2560> <!-- gpu -->
+                        <vgcs:videoRandomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79726">64</vgcs:videoRandomAccessMemory> <!-- kilobyte -->    
+                        <vgcs:soundChip rdf:resource="https://www.wikidata.org/wiki/Q2335099"/> <!-- Yamaha YM2612 -->
+                        <vgcs:audioPort>
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q2164724"/> <!-- RF Connector -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q1133767"/> <!-- DIN connector -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q1359217"/> <!-- Mini-DIN Connector -->
+                                <rdf:_4 rdf:resource="https://www.wikidata.org/wiki/Q25160417"/> <!-- 3.5mm stereo receptacle -->
+                            </rdf:Bag>
+                        </vgcs:audioPort>
+                        <vgcs:numberOfAudioPorts>4</vgcs:numberOfAudioPorts>
+                </dct:hasPart>
+        
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Accessories"/>
+                        <vgcs:controllerType>
+                            <rdf:Seq>
+                                <rdf:_1>Sega Genesis 3 button control pad</rdf:_1>
+                                <rdf:_2>Sega Genesis 6 button control pad</rdf:_2>
+                            </rdf:Seq>
+                        </vgcs:controllerType>
+                        <vgcs:memoryType>none</vgcs:memoryType>
+                        <vgcs:internetCapability>
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q1851885"/> <!-- Sega Meganet -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q7446143"/> <!-- Sega Channel -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q8041689"/> <!-- XBAND -->
+                            </rdf:Bag>
+                        </vgcs:internetCapability>
+                        <vgcs:hardwareExpansions>
+                            <rdf:Seq>
+                                <rdf:_1>Power Base Converter</rdf:_1>
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q1047516"/> <!-- Sega CD -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q1063978"/> <!-- Sega 32X -->
+                            </rdf:Seq>
+                        </vgcs:hardwareExpansions> 
+                </dct:hasPart>
+    </rdf:Description>
+    
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    
+    <rdf:Description rdf:ID="SegaSaturn">
+        <rdf:type rdf:resource="#Console"/>
+            <dct:title>Sega Saturn</dct:title>
+            <vra:manufacturer rdf:resource="https://www.wikidata.org/wiki/Q122741"/> <!-- Sega -->
+            <dct:contributor> 
+                <rdf:Bag>
+                    <rdf:_1>Hideki Sato</rdf:_1>
+                    <rdf:_2>Hideki Okamura</rdf:_2>
+                </rdf:Bag>
+            </dct:contributor>
+            <vgcs:consoleDateRange>1994/2000</vgcs:consoleDateRange>
+            <vgms:retailReleaseDate>1994-11-22</vgms:retailReleaseDate>
+            <vgms:format rdf:resource="https://www.wikidata.org/wiki/Q7982"/> <!-- CD-ROM -->
+            <vgms:methodConnectivity>Wired Controllers</vgms:methodConnectivity>
+            <vgcs:controllerNumber>2</vgcs:controllerNumber>
+            <vgcs:displayResolution>
+                <rdf:Bag>
+                    <rdf:_1>320x224</rdf:_1>
+                    <rdf:_2>704x224</rdf:_2>
+                    <rdf:_3>640×480</rdf:_3>
+                </rdf:Bag>
+            </vgcs:displayResolution>
+            <vgcs:colorRange>16,780,000</vgcs:colorRange>
+            <vgms:regionCode>
+                <rdf:Bag>               
+                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185796"/> <!-- NTSC -->
+                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q105973"/> <!-- PAL -->
+                </rdf:Bag>
+            </vgms:regionCode>
+            <vgcs:regionLock>
+                <rdf:Bag>               
+                    <rdf:_1>System Software</rdf:_1>
+                    <rdf:_2>System Hardware</rdf:_2>
+                </rdf:Bag>
+            </vgcs:regionLock>
+            <vgcs:consoleRevisionNumber>
+                <rdf:Seq>
+                    <rdf:_1>VA0</rdf:_1>
+                    <rdf:_2>VA1</rdf:_2>
+                    <rdf:_3>VA2</rdf:_3>
+                    <rdf:_4>VA3</rdf:_4>
+                    <rdf:_5>VA4</rdf:_5>
+                    <rdf:_6>VA5</rdf:_6>
+                    <rdf:_7>VA6</rdf:_7>
+                    <rdf:_8>VA7</rdf:_8>
+                    <rdf:_9>VA8</rdf:_9>
+                    <rdf:_10>VA9</rdf:_10>
+                    <rdf:_11>VA10</rdf:_11>
+                    <rdf:_12>VA11</rdf:_12>
+                    <rdf:_13>VA12</rdf:_13>
+                    <rdf:_14>VA13</rdf:_14>
+                    <rdf:_15>VA14</rdf:_15>
+                    <rdf:_16>VA15</rdf:_16>
+                </rdf:Seq>
+            </vgcs:consoleRevisionNumber>
+            <wd:P306>Multiplayer</wd:P306> <!-- Operating System -->
+            
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Hardware"/>
+                        <vgcs:videoPortType rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                        <vgcs:numberOfVideoPorts>1</vgcs:numberOfVideoPorts>
+                        <wd:P880 rdf:resource="https://www.wikidata.org/wiki/Q1205020"/> <!-- cpu, SuperH -->
+                        <wd:P2149 rdf:datatype="https://www.wikidata.org/wiki/Q732707">28.6</wd:P2149> <!-- clock frequency, megahertz -->
+                        <vgcs:numberOfCPUs>2</vgcs:numberOfCPUs>
+                        <vgcs:randomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79735">16</vgcs:randomAccessMemory> <!-- megabyte -->
+                        <wd:P2560> <!-- gpu -->
+                            <rdf:Seq>
+                                <rdf:_1>VDP1</rdf:_1>
+                                <rdf:_2>VDP2</rdf:_2>
+                            </rdf:Seq>
+                        </wd:P2560> 
+                        <vgcs:videoRandomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79735">12</vgcs:videoRandomAccessMemory> <!-- megabyte -->    
+                        <vgcs:soundChip>
+                            <rdf:Bag>
+                                <rdf:_1> Motorola 68EC000</rdf:_1>
+                                <rdf:_2>Yamaha FH1</rdf:_2>
+                            </rdf:Bag>
+                        </vgcs:soundChip>
+                        <vgcs:audioPort rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                        <vgcs:numberOfAudioPorts>1</vgcs:numberOfAudioPorts>
+                </dct:hasPart>
+        
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Accessories"/>
+                        <vgcs:controllerType>
+                            <rdf:Bag>
+                                <rdf:_1>Sega Saturn Control Pad Model 1</rdf:_1>
+                                <rdf:_2>Sega Saturn Control Pad MOdel 2</rdf:_2>
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q73005568"/> <!-- Sega Saturn 3D Control Pad -->
+                                <rdf:_4>Sega Saturn Arcade Racer</rdf:_4>
+                            </rdf:Bag>
+                        </vgcs:controllerType>
+                        <vgcs:memoryType>
+                            <rdf:Seq>
+                                <rdf:_1>Built in</rdf:_1>
+                                <rdf:_2>Sega Saturn Backup Cartridge </rdf:_2>
+                            </rdf:Seq>
+                        </vgcs:memoryType>
+                        <vgcs:memoryValue rdf:datatype="https://www.wikidata.org/wiki/Q3194304">32</vgcs:memoryValue> <!-- Kilobit -->
+                        <vgcs:internetCapability rdf:resource="https://www.wikidata.org/wiki/Q17048659"/> <!-- Sega Net Link -->
+                        <vgcs:hardwareExpansions>Floppy Disk Drive</vgcs:hardwareExpansions>
+                    </dct:hasPart>
+    </rdf:Description>
+    
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    
+    <rdf:Description rdf:ID="PlayStation">
+        <rdf:type rdf:resource="#Console"/>
+            <dct:title>Sony PlayStation</dct:title>
+            <vra:manufacturer rdf:resource="https://www.wikidata.org/wiki/Q41187"/> <!-- Sony -->
+            <dct:contributor rdf:resource="https://www.wikidata.org/wiki/Q557018"/> <!-- Ken Kutaragi -->
+            <vgcs:consoleDateRange>1994/2006</vgcs:consoleDateRange>
+            <vgms:retailReleaseDate>1994-12-03</vgms:retailReleaseDate>
+            <vgms:format rdf:resource="https://www.wikidata.org/wiki/Q7982"/> <!-- CD-ROM -->
+            <vgms:methodConnectivity>Wired Controllers</vgms:methodConnectivity>
+            <vgcs:controllerNumber>2</vgcs:controllerNumber>
+            <vgcs:displayResolution>
+                <rdf:Bag>
+                    <rdf:_1>256x224</rdf:_1>
+                    <rdf:_2>640×480</rdf:_2>
+                </rdf:Bag>
+            </vgcs:displayResolution>
+            <vgcs:colorRange>16,700,000</vgcs:colorRange>
+            <vgms:regionCode>
+                <rdf:Bag>               
+                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185796"/> <!-- NTSC -->
+                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q105973"/> <!-- PAL -->
+                    <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q6955505"/>  <!-- NTSC-J -->
+                </rdf:Bag>
+            </vgms:regionCode>
+            <vgcs:regionLock>
+                <rdf:Bag>               
+                    <rdf:_1>System hardware</rdf:_1>
+                    <rdf:_2>System software</rdf:_2>
+                </rdf:Bag>
+            </vgcs:regionLock>
+            <vgcs:consoleRevisionNumber>
+                <rdf:Seq>
+                    <rdf:_1>SCPH-10001</rdf:_1>
+                    <rdf:_2>SCPH-1001</rdf:_2>
+                    <rdf:_3>SCPH-1002</rdf:_3>
+                    <rdf:_4>SCPH-3000</rdf:_4>
+                    <rdf:_5>SCPH-3500</rdf:_5>
+                    <rdf:_6>SCPH-5000</rdf:_6>
+                    <rdf:_7>SCPH-5001</rdf:_7>
+                    <rdf:_8>SCPH-5500</rdf:_8>
+                    <rdf:_9>SCPH-5501</rdf:_9>
+                    <rdf:_10>SCPH-5501</rdf:_10>
+                    <rdf:_11>SCPH-5502</rdf:_11>
+                    <rdf:_12>SCPH-5503</rdf:_12>
+                    <rdf:_13>SCPH-7000</rdf:_13>
+                    <rdf:_14>SCPH-7000W</rdf:_14>
+                    <rdf:_15>SCPH-7001</rdf:_15>
+                    <rdf:_16>SCPH-7002</rdf:_16>
+                    <rdf:_17>SCPH-7003</rdf:_17>
+                    <rdf:_18>SCPH-7500</rdf:_18>
+                    <rdf:_19>SCPH-7501</rdf:_19>
+                    <rdf:_20>SCPH-7502</rdf:_20>
+                    <rdf:_21>SCPH-7503</rdf:_21>
+                    <rdf:_22>SCPH-9000</rdf:_22>
+                    <rdf:_23>SCPH-9001</rdf:_23>
+                    <rdf:_24>SCPH-9002</rdf:_24>
+                    <rdf:_25>SCPH-9003</rdf:_25>
+                    <rdf:_26>SCPH-100</rdf:_26>
+                    <rdf:_27>SCPH-101</rdf:_27>
+                    <rdf:_28>SCPH-102</rdf:_28>
+                    <rdf:_29>SCPH-103</rdf:_29>
+                </rdf:Seq>
+            </vgcs:consoleRevisionNumber>
+            <wd:P306>sound scope</wd:P306> <!-- Operating System -->
+            
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Hardware"/>
+                        <vgcs:videoPortType> 
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q727477"/> <!-- S-Video -->
+                            </rdf:Bag>
+                        </vgcs:videoPortType>
+                        <vgcs:numberOfVideoPorts>3</vgcs:numberOfVideoPorts>
+                        <wd:P880 rdf:resource="https://www.wikidata.org/wiki/Q1243971"/> <!-- cpu, R3000 -->
+                        <wd:P2149 rdf:datatype="https://www.wikidata.org/wiki/Q732707">33.86</wd:P2149> <!-- clock frequency, megahertz -->
+                        <vgcs:numberOfCPUs>1</vgcs:numberOfCPUs>
+                        <vgcs:randomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79735">2</vgcs:randomAccessMemory> <!-- megabyte -->
+                        <wd:P2560>SCPH-9000</wd:P2560> <!-- gpu -->
+                        <vgcs:videoRandomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79735">1</vgcs:videoRandomAccessMemory> <!-- megabyte -->    
+                        <vgcs:soundChip>PlayStation Custom Sound Processor</vgcs:soundChip>
+                        <vgcs:audioPort rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                        <vgcs:numberOfAudioPorts>2</vgcs:numberOfAudioPorts>
+                </dct:hasPart>
+        
+                <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Accessories"/>
+                        <vgcs:controllerType>
+                            <rdf:Seq>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q3689266"/> <!-- PlayStation Controller -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q7202963"/> <!-- PlayStation Analog Joystick -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q1132745"/> <!-- Dual Analog Controller -->
+                                    <rdf:_4 rdf:resource="https://www.wikidata.org/wiki/Q62091594"/> <!-- DualShock -->
+                            </rdf:Seq>
+                        </vgcs:controllerType>
+                        <vgcs:memoryType>PlayStation Memory Card</vgcs:memoryType>
+                        <vgcs:memoryValue rdf:datatype="https://www.wikidata.org/wiki/Q3332814">1</vgcs:memoryValue> <!-- megabit -->
+                        <vgcs:hardwareExpansions>
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q7202968"/> <!-- PlayStation Mouse -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q3906470"/> <!-- PlayStation Link Cable -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q7202969"/> <!-- PlayStation Multitap -->
+                                <rdf:_4>Memory Drive</rdf:_4>
+                                <rdf:_5 rdf:resource="https://www.wikidata.org/wiki/Q3779782"/> <!-- GunCon -->
+                                <rdf:_6 rdf:resource="https://www.wikidata.org/wiki/Q4039468"/> <!-- Glasstron -->
+                                <rdf:_7 rdf:resource="https://www.wikidata.org/wiki/Q1147129"/> <!-- PocketStation -->
+                            </rdf:Bag>
+                        </vgcs:hardwareExpansions> 
+                </dct:hasPart>
+    </rdf:Description>
+    
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    
+    <rdf:Description rdf:ID="NintendoGameCube">
+        <rdf:type rdf:resource="#Console"/>
+          <dct:title>Nintendo GameCube</dct:title>
+          <vra:manufacturer rdf:resource="https://www.wikidata.org/wiki/Q8093"/> <!-- Nintendo -->
+          <dct:contributor> 
+              <rdf:Bag>
+                  <rdf:_1>Wei Yen</rdf:_1>
+                  <rdf:_2>Howard Cheng</rdf:_2>
+              </rdf:Bag>
+          </dct:contributor>
+          <vgcs:consoleDateRange>2001/2007</vgcs:consoleDateRange>
+          <vgms:retailReleaseDate>2001-09-14</vgms:retailReleaseDate>
+          <vgms:format rdf:resource="https://www.wikidata.org/wiki/Q1071532"/> <!-- Mini DVD -->
+          <vgms:methodConnectivity>Wired Controllers</vgms:methodConnectivity>
+          <vgcs:controllerNumber>4</vgcs:controllerNumber>
+          <vgcs:displayResolution>
+              <rdf:Bag>
+                  <rdf:_1>596×448</rdf:_1>
+                  <rdf:_2>608×456</rdf:_2>
+                  <rdf:_3>640×480</rdf:_3>
+              </rdf:Bag>
+          </vgcs:displayResolution>
+          <vgcs:colorRange>16,700,000</vgcs:colorRange>
+          <vgms:regionCode>
+              <rdf:Bag>               
+                  <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185796"/> <!-- NTSC -->
+                  <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q105973"/> <!-- PAL -->
+                  <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q6955505"/>  <!-- NTSC-J -->
+                  <rdf:_4>NTSC-K</rdf:_4>
+              </rdf:Bag>
+          </vgms:regionCode>
+          <vgcs:regionLock>
+              <rdf:Bag>               
+                  <rdf:_1>Proprietary Discs</rdf:_1>
+                  <rdf:_2>System Software</rdf:_2>
+              </rdf:Bag>
+          </vgcs:regionLock>
+          <vgcs:consoleRevisionNumber>
+              <rdf:Seq>
+                  <rdf:_1>DOL-001</rdf:_1>
+                  <rdf:_2>DOL-101</rdf:_2>
+                  <rdf:_3>DOL-002 ^3</rdf:_3>
+                  <rdf:_4>DOT-001</rdf:_4>
+                  <rdf:_5>DOT-001P</rdf:_5>
+                  <rdf:_6>DOT-002</rdf:_6>
+                  <rdf:_7>DOT-002P</rdf:_7>
+                  <rdf:_8>DOT-006</rdf:_8>
+                  <rdf:_9>GCT-0100</rdf:_9>
+                  <rdf:_10>GCT-0200</rdf:_10>
+                  <rdf:_11>SL-GC10</rdf:_11>
+              </rdf:Seq>
+          </vgcs:consoleRevisionNumber>
+          <wd:P306 rdf:resource="https://www.wikidata.org/wiki/Q114809757"/> <!-- Operating System, Dolphin OS -->
+          
+            <dct:hasPart rdf:parseType="Resource">
+            <rdf:type rdf:resource="#Hardware"/>
+                <vgcs:videoPortType> 
+                    <rdf:Bag>
+                        <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                        <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q1154483"/> <!-- Component video -->
+                        <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q727477"/> <!-- S-Video -->
+                    </rdf:Bag>
+                </vgcs:videoPortType>
+                <vgcs:numberOfVideoPorts>2</vgcs:numberOfVideoPorts>
+                <wd:P880 rdf:resource="https://www.wikidata.org/wiki/Q1890727"/> <!-- cpu, PowerPC 7xx -->
+                    <wd:P2149 rdf:datatype="https://www.wikidata.org/wiki/Q732707">486</wd:P2149> <!-- clock frequency, megahertz -->
+                <vgcs:numberOfCPUs>1</vgcs:numberOfCPUs>
+                <vgcs:randomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79735">43</vgcs:randomAccessMemory> <!-- megabyte -->
+                <wd:P2560 rdf:resource="https://www.wikidata.org/wiki/Q63109262"/> <!-- gpu, ATI Flipper -->
+                <vgcs:videoRandomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79735">3</vgcs:videoRandomAccessMemory> <!-- megabyte -->    
+                <vgcs:soundChip>Macronix 16-bit DSP</vgcs:soundChip>
+                <vgcs:audioPort>
+                    <rdf:Bag>
+                        <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                        <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q1154483"/> <!-- Component video -->
+                    </rdf:Bag>
+                </vgcs:audioPort>
+                <vgcs:numberOfAudioPorts>2</vgcs:numberOfAudioPorts>
+            </dct:hasPart>
+        
+            <dct:hasPart rdf:parseType="Resource">
+                <rdf:type rdf:resource="#Accessories"/>
+                    <vgcs:controllerType>
+                        <rdf:Seq>
+                            <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q4231718"/> <!-- Nintendo GameCube Controller -->
+                            <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q3089117"/> <!-- WaveBird Wireless Controller -->
+                        </rdf:Seq>
+                    </vgcs:controllerType>
+                    <vgcs:memoryType rdf:resource="https://www.wikidata.org/wiki/Q3877244"/> <!-- Nintendo GameCube Memory Card -->
+                    <vgcs:memoryValue rdf:datatype="https://www.wikidata.org/wiki/Q3332814">4-64</vgcs:memoryValue> <!-- Megabit -->
+                    <vgcs:internetCapability rdf:resource="https://www.wikidata.org/wiki/Q9299794"/> <!-- GameCube online functionality -->
+                    <vgcs:hardwareExpansions rdf:resource="https://www.wikidata.org/wiki/Q963631"/> <!-- Game Boy Player -->
+            </dct:hasPart>
+    </rdf:Description>
+        
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        
+        <rdf:Description rdf:ID="Xbox360">
+            <rdf:type rdf:resource="#Console"/>
+                <dct:title>Microsoft Xbox 360</dct:title>
+                <vra:manufacturer rdf:resource="https://www.wikidata.org/wiki/Q2283"/> <!-- Microsoft -->
+                <vgcs:consoleDateRange>2005/2016</vgcs:consoleDateRange>
+                <vgms:retailReleaseDate>2005-11-22</vgms:retailReleaseDate>
+                <vgms:format>
+                    <rdf:Bag>               
+                        <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q5294"/> <!-- DVD -->
+                        <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q54820071"/> <!-- Digital Download -->
+                    </rdf:Bag>
+                </vgms:format> 
+                <vgms:methodConnectivity>Wireless Controllers</vgms:methodConnectivity>
+                <vgcs:controllerNumber>4</vgcs:controllerNumber>
+                <vgcs:displayResolution>
+                    <rdf:Bag>
+                        <rdf:_1>640×480</rdf:_1>
+                        <rdf:_2>1280×720</rdf:_2>
+                        <rdf:_3>1920×1080</rdf:_3>
+                    </rdf:Bag>
+                </vgcs:displayResolution>
+                <vgcs:colorRange>16,700,000+</vgcs:colorRange>
+                <vgms:regionCode>
+                    <rdf:Bag>               
+                        <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185796"/> <!-- NTSC -->
+                        <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q105973"/> <!-- PAL -->
+                        <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q6955505"/>  <!-- NTSC-J -->
+                    </rdf:Bag>
+                </vgms:regionCode>
+                <vgcs:regionLock>Proprietary Discs</vgcs:regionLock>
+                <vgcs:consoleRevisionNumber>
+                    <rdf:Seq>
+                        <rdf:_1>Xenon</rdf:_1>
+                        <rdf:_2>Zephyr</rdf:_2>
+                        <rdf:_3>Falcon</rdf:_3>
+                        <rdf:_4>Opus</rdf:_4>
+                        <rdf:_5>Jasper</rdf:_5>
+                        <rdf:_6>Jasper/Kronos</rdf:_6>
+                        <rdf:_7>Trinity/Velje</rdf:_7>
+                        <rdf:_8>Corona</rdf:_8>
+                    </rdf:Seq>
+                </vgcs:consoleRevisionNumber>
+                <wd:P306 rdf:resource="https://www.wikidata.org/wiki/Q483881"/> <!-- Operating System, Windows 2000 -->
+                
+                    <dct:hasPart rdf:parseType="Resource">
+                    <rdf:type rdf:resource="#Hardware"/>
+                        <vgcs:videoPortType> 
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q1154483"/> <!-- Component video -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q539719"/> <!-- VGA connector -->
+                                <rdf:_4 rdf:resource="https://www.wikidata.org/wiki/Q58090628"/> <!-- HDMI connector -->
+                            </rdf:Bag>
+                        </vgcs:videoPortType>
+                        <vgcs:numberOfVideoPorts>3</vgcs:numberOfVideoPorts>
+                        <wd:P880>PowerPC Tri-Core Xenon</wd:P880> <!-- cpu -->
+                            <wd:P2149 rdf:datatype="https://www.wikidata.org/wiki/Q3276763">3.2</wd:P2149> <!-- clock frequency, gigahertz -->
+                        <vgcs:numberOfCPUs>1</vgcs:numberOfCPUs>
+                        <vgcs:randomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79735">512</vgcs:randomAccessMemory> <!-- megabyte -->
+                        <wd:P2560 rdf:resource="https://www.wikidata.org/wiki/Q1192582"/> <!-- gpu, ATI Xenos -->
+                        <vgcs:videoRandomAccessMemory rdf:datatype="https://www.wikidata.org/wiki/Q79735">10</vgcs:videoRandomAccessMemory> <!-- megabyte -->    
+                        <vgcs:soundChip>PowerPC Tri-Core Xenon</vgcs:soundChip>
+                        <vgcs:audioPort>
+                            <rdf:Bag>
+                                <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q185644"/> <!-- Composite video -->
+                                <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q1154483"/> <!-- Component video -->
+                                <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q58090628"/> <!-- HDMI connector -->
+                            </rdf:Bag>
+                        </vgcs:audioPort>
+                        <vgcs:numberOfAudioPorts>2</vgcs:numberOfAudioPorts>
+                    </dct:hasPart>
+                    
+                    <dct:hasPart rdf:parseType="Resource">
+                        <rdf:type rdf:resource="#Accessories"/>
+                            <vgcs:controllerType rdf:resource="https://www.wikidata.org/wiki/Q4817881"/> <!-- Xbox 360 Controller -->
+                            <vgcs:memoryType>
+                                <rdf:Bag>
+                                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q1647694"/> <!-- USB flash drive -->
+                                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q4439"/> <!-- Hard Drive Disk -->
+                                    <rdf:_3 rdf:resource="https://www.wikidata.org/wiki/Q914359"/> <!-- Cloud Storage -->
+                                    <rdf:_4>Memory Cards</rdf:_4>
+                                </rdf:Bag>
+                            </vgcs:memoryType>
+                            <vgcs:memoryValue rdf:datatype="https://www.wikidata.org/wiki/Q3332814">64-5000</vgcs:memoryValue> <!-- Megabit -->
+                            <vgcs:internetCapability>
+                                <rdf:Seq>
+                                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q546389"/> <!-- Fast Ethernet -->
+                                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q29643"/> <!-- Wi-Fi -->
+                                </rdf:Seq>
+                            </vgcs:internetCapability>
+                            <vgcs:hardwareExpansions>
+                                <rdf:Seq>
+                                    <rdf:_1 rdf:resource="https://www.wikidata.org/wiki/Q8043350"/> <!-- Xbox 360 HD DVD Player -->
+                                    <rdf:_2 rdf:resource="https://www.wikidata.org/wiki/Q474334"/> <!-- Kinect -->
+                                </rdf:Seq>
+                            </vgcs:hardwareExpansions>
+                    </dct:hasPart>
+    </rdf:Description>
+ 
+</rdf:RDF>
